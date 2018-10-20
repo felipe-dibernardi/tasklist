@@ -1,5 +1,7 @@
 package br.com.fdbst.tasklist.model;
 
+import br.com.fdbst.tasklist.type.ProfileType;
+
 import javax.annotation.Generated;
 import javax.persistence.*;
 
@@ -21,6 +23,9 @@ public class User {
     private String username;
 
     private String password;
+
+    @Enumerated(EnumType.STRING)
+    private ProfileType profile;
 
     public Integer getId() {
         return id;
@@ -44,5 +49,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public ProfileType getProfile() {
+        return profile;
+    }
+
+    public void setProfile(ProfileType profile) {
+        this.profile = profile;
     }
 }
