@@ -2,6 +2,8 @@ package br.com.fdbst.tasklist.service;
 
 import br.com.fdbst.tasklist.model.Task;
 
+import javax.ejb.Stateless;
+
 /**
  * Classe TaskService
  *
@@ -9,5 +11,6 @@ import br.com.fdbst.tasklist.model.Task;
  *
  * @author Felipe Di Bernardi S Thiago
  */
+@Stateless
 public class TaskService extends BasePersistence<Task> {
 }
