@@ -26,20 +26,34 @@ public class UserService extends BasePersistence<User> {
     /**
      * Busca um Usuário pelo username,
      * @param username Username do Usuário.
-     * @return Usuário.
+     * @return Usuário ou nulo se não for encontrado.
      */
     public User findByUsername(String username) {
         StringBuilder strQuery = new StringBuilder();
 
         strQuery.append("SELECT u FROM User u ");
-        strQuery.append("WHERE u.username = ").append(username);
+        strQuery.append("WHERE u.username = '").append(username).append("'");
 
         Query query = super.createQuery(strQuery.toString());
 
-        if (query.getResultList().isEmpty()) {
-            return null;
-        } else {
-            return (User) query.getSingleResult();
-        }
+        return query.getResultList().isEmpty() ? null : (User) query.getSingleResult();
+    }
+
+    /**
+     * Busca por um Usuário com o seguinte par username/senha
+     * @param username Username do usuário.
+     * @param password Senha do usuário.
+     * @return Usuário ou nulo se não for encontrado.
+     */
+    public User authenticate(String username, String password) {
+        StringBuilder strQuery = new StringBuilder();
+
+        strQuery.append("SELECT u FROM User u ");
+        strQuery.append("WHERE u.username = '").append(username).append("' ");
+        strQuery.append("AND u.password = '").append(MD5Hash.encript(password)).append("'");
+
+        Query query = super.createQuery(strQuery.toString());
+
+        return query.getResultList().isEmpty() ? null : (User) query.getSingleResult();
     }
 }
