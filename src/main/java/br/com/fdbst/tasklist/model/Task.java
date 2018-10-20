@@ -40,6 +40,10 @@ public class Task extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private StatusType status;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
     public Integer getId() {
         return id;
     }
@@ -102,5 +106,13 @@ public class Task extends BaseEntity {
 
     public void setStatus(StatusType status) {
         this.status = status;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
