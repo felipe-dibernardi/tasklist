@@ -1,11 +1,13 @@
 package br.com.fdbst.tasklist.service;
 
+import br.com.fdbst.tasklist.exception.BusinessException;
 import br.com.fdbst.tasklist.model.Task;
 import br.com.fdbst.tasklist.model.User;
 import br.com.fdbst.tasklist.type.StatusType;
 
 import javax.ejb.Stateless;
 import javax.persistence.Query;
+import java.util.Date;
 import java.util.EnumSet;
 import java.util.List;
 
@@ -38,4 +40,55 @@ public class TaskService extends BasePersistence<Task> {
         return query.getResultList();
     }
 
+    @Override
+    public Task insert(Task task) throws BusinessException {
+        task.setStatus(StatusType.OPEN);
+        task.setCreation(new Date());
+        return super.insert(task);
+    }
+
+    @Override
+    public Task update(Task task) throws BusinessException {
+        task.setLastUpdate(new Date());
+        return super.update(task);
+    }
+
+    @Override
+    public void remove(Class<Task> classType, Integer id) throws BusinessException {
+        try {
+            Task task = this.find(classType, id);
+            task.setStatus(StatusType.REMOVED);
+            task.setRemoval(new Date());
+            this.update(task);
+        } catch (BusinessException e) {
+            throw new BusinessException("action.remove.error");
+        }
+
+    }
+
+    /**
+     * Conclui uma Tarefa por meio do seu id.
+     * @param id Id da Terafa.
+     * @return Tarefa concluída.
+     * @throws BusinessException Exceção a ser lançada caso haja erro ao atualizar.
+     */
+    public Task conclude(Integer id) throws BusinessException {
+        Task task = this.find(Task.class, id);
+        task.setStatus(StatusType.CONCLUDED);
+        task.setConclusion(new Date());
+        return this.update(task);
+    }
+
+    /**
+     * Reinicia uma Tarefa concluída por meio do seu id.
+     * @param id Id da Tarefa.
+     * @return Tarefa concluída.
+     * @throws BusinessException Exceção a ser lançada caso haja erro ao atualizar.
+     */
+    public Task restart(Integer id) throws BusinessException {
+        Task task = this.find(Task.class, id);
+        task.setStatus(StatusType.OPEN);
+        task.setConclusion(null);
+        return this.update(task);
+    }
 }
