@@ -58,6 +58,7 @@ public class UserWS {
      * @return Usuário autenticado.
      */
     @POST
+    @Path("authenticate")
     @Consumes("application/json")
     @Produces("application/json")
     public Response authenticate(AuthDTO auth) {

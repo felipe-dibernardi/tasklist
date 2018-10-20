@@ -82,6 +82,38 @@ public class TaskWS {
     }
 
     /**
+     * Conclui uma Tarefa por meio do id.
+     * @param id Id da Tarefa.
+     * @return Tarefa concluída.
+     */
+    @PUT
+    @Path("conclude/{id}")
+    @Produces("application/json")
+    public Response conclude(@PathParam("id") Integer id) {
+        try {
+            return Response.ok().entity(this.taskService.conclude(id)).build();
+        } catch (BusinessException e) {
+            return Response.serverError().entity(e).build();
+        }
+    }
+
+    /**
+     * Reinicia uma Tarefa por meio do id.
+     * @param id Id da Tarefa.
+     * @return Tarefa reiniciada.
+     */
+    @PUT
+    @Path("restart/{id}")
+    @Produces("application/json")
+    public Response restart(@PathParam("id") Integer id) {
+        try {
+            return Response.ok().entity(this.taskService.restart(id)).build();
+        } catch (BusinessException e) {
+            return Response.serverError().entity(e).build();
+        }
+    }
+
+    /**
      * Remove uma Tarefa do sistema por meio do id.
      * @param id Id da Tarefa a ser removida.
      * @return Resposta da operação.
