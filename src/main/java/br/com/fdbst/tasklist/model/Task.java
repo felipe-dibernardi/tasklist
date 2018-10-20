@@ -14,7 +14,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "task")
-public class Task {
+public class Task extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
