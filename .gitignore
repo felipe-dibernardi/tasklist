@@ -24,7 +24,7 @@ faces-config.NavData
 /out-tsc
 
 # dependencies
-/node_modules
+node_modules
 
 # IDEs and editors
 /.idea
@@ -51,6 +51,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+.editorconfig
 
 # System Files
 .DS_Store

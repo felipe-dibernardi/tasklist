@@ -1,0 +1,9 @@
+/* Button */
+.mat-raised-button {
+  font-weight: bold; }
+
+.mat-raised-button.mat-primary {
+  color: #F7E000; }
+
+.mat-raised-button.mat-accent {
+  color: #003977; }

@@ -1,0 +1,7 @@
+.background {
+  background: linear-gradient(90deg, #003977, #44c4f1);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 300px auto;
+  justify-items: center; }

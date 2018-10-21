@@ -1,0 +1,29 @@
+<div class="body">
+  <div class="background">
+    <div class="logo-container">
+      <div style="align-self: end">
+        <span class="subtitle">Cadastre sua conta</span>
+      </div>
+    </div>
+    <div class="signup">
+      <form class="signup-container">
+        <mat-form-field>
+          <input matInput placeholder="Nome" [(ngModel)]="user.name" name="name" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Sobrenome" [(ngModel)]="user.surname" name="name" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Username" [(ngModel)]="user.username" name="username" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="password" placeholder="Senha" [(ngModel)]="user.password" name="password" required>
+        </mat-form-field>
+        <button mat-raised-button color="accent" class="signup-singleline login-button" (click)="onSubmit()">Cadastrar</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+

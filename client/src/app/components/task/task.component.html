@@ -1,0 +1,28 @@
+<div class="background">
+  <app-header style="width:100%"></app-header>
+  <h2>Edição de Tarefa</h2>
+  <div style="width: 40%">
+    <form class="container">
+      <mat-form-field class="singleline input">
+        <input matInput placeholder="Título" style="width: 100%" [(ngModel)]="task.title" name="title" required>
+      </mat-form-field>
+      <mat-form-field class="singleline input">
+        <textarea matInput placeholder="Descrição" style="width: 100%; height: 125px" [(ngModel)]="task.description" name="name" required></textarea>
+      </mat-form-field>
+      <!--<mat-form-field>-->
+        <!--<input matInput placeholder="Username" [(ngModel)]="user.username" name="username" required>-->
+      <!--</mat-form-field>-->
+      <!--<mat-form-field>-->
+        <!--<input matInput type="password" placeholder="Senha" [(ngModel)]="user.password" name="password" required>-->
+      <!--</mat-form-field>-->
+      <div class="singleline">
+        <button mat-raised-button color="accent" (click)="save(task)">Salvar</button>
+        <button mat-raised-button color="accent" (click)="conclude(task.id)" *ngIf="task.id && task.status === 'OPEN'">Concluir</button>
+        <button mat-raised-button color="accent" (click)="restart(task.id)" *ngIf="task.id && task.status === 'CONCLUDED'">Reiniciar</button>
+        <button mat-raised-button color="accent" (click)="remove(task.id)" *ngIf="task.id">Remover</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+

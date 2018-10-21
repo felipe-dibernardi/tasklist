@@ -1,0 +1,86 @@
+.body {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg, #003977, #44C4F1);
+}
+
+.background {
+  grid-template-rows: 300px auto;
+  height: 100vh;
+}
+
+.logo-container {
+  grid-column: 1/-1;
+  height: 200px;
+  align-self: center;
+}
+
+.logo-container div {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  position: relative;
+  top: -25px;
+  color: #f7e000;
+  font-weight: bold;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+}
+
+.logo-container div span {
+  color: #FFF;
+  margin-right: 0.25em;
+}
+
+.logo {
+  width: 400px;
+}
+
+.background {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.signup {
+  align-self: start;
+  width: 100%;
+}
+
+.signup-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2em;
+  justify-items: center;
+  align-items: center;
+  height: 400px;
+  background-color: #FEFEFE;
+  padding: 30px;
+}
+
+.comparation-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.signup-container input {
+  font-size: 1.25em;
+}
+
+.signup-singleline {
+  grid-column: 1/-1;
+}
+
+.signup-name {
+  width: 80%;
+}
+
+.logo-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 2em;
+}
+
+/*# sourceMappingURL=signup.component.css.map */

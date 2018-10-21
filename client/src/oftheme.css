@@ -1,0 +1,51 @@
+/*
+Syntax error: File to import not found or unreadable: ~@angular/material/theming.
+              Load path: C:/Devel/estudos/of-frontend/src
+        on line 1 of oftheme.scss
+
+1: @import '~@angular/material/theming';
+2: 
+3: $orgfacil-typography: mat-typography-config($font-family: '"Montserrat", sans-serif;');
+4: 
+5: @include mat-core($orgfacil-typography);
+6: 
+
+Backtrace:
+oftheme.scss:1
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/import_node.rb:67:in `import'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+org/jruby/RubyArray.java:2414:in `map'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `visit_children'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:7:in `visit'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/tree/root_node.rb:20:in `render'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/engine.rb:315:in `_render'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/engine.rb:262:in `render'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:203:in `update_stylesheets'
+org/jruby/RubyArray.java:1613:in `each'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/plugin.rb:81:in `update_stylesheets'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/exec.rb:443:in `watch_or_update'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/exec.rb:326:in `process_result'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/exec.rb:41:in `parse'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/lib/sass/exec.rb:21:in `parse!'
+C:/jruby-1.7.27/lib/ruby/gems/shared/gems/sass-3.2.19/bin/scss:13:in `(root)'
+org/jruby/RubyKernel.java:1059:in `load'
+c:\jruby-1.7.27\bin\scss:23:in `(root)'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: ~@angular/material/theming.\A               Load path: C:/Devel/estudos/of-frontend/src\A         on line 1 of oftheme.scss\A \A 1: @import '~@angular/material/theming';\A 2: \A 3: $orgfacil-typography: mat-typography-config($font-family: '\"Montserrat\", sans-serif;');\A 4: \A 5: @include mat-core($orgfacil-typography);\A 6: "; }

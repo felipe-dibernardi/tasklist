@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+
+$orgfacil-typography: mat-typography-config($font-family: '"Montserrat", sans-serif;');
+
+@include mat-core($orgfacil-typography);
+
+$orgfacil-primary: mat-palette($mat-blue, A700, A400, 900);
+$orgfacil-accent: mat-palette($mat-yellow, 300, 200, 400);
+$orgfacil-warn: mat-palette($mat-red);
+
+$orgfacil-theme: mat-light-theme($orgfacil-primary, $orgfacil-accent, $orgfacil-warn);
+
+@include  angular-material-theme($orgfacil-theme);

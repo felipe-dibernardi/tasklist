@@ -1,0 +1,25 @@
+.background {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 75px 75px auto;
+  grid-row-gap: 30px;
+  justify-items: center;
+  height: 100vh;
+  background: #e0e0e0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-button {
+  margin-left: 10px;
+}
+
+.task-table {
+  width: 70%;
+}
+
+/*# sourceMappingURL=task-list.component.css.map */
