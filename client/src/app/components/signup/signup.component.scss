@@ -1,0 +1,41 @@
+@import "../../../assets/css/public";
+
+.background {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center; }
+
+.signup {
+  align-self: start;
+  width: 100%;}
+
+.signup-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2em;
+  justify-items: center;
+  align-items: center;
+  height: 400px;
+  background-color: #FEFEFE;
+  padding: 30px; }
+
+.comparation-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center; }
+
+.signup-container input {
+  font-size: 1.25em; }
+
+.signup-singleline {
+  grid-column: 1/-1; }
+
+.signup-name {
+  width: 80%; }
+
+.logo-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 2em;
+}

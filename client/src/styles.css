@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
+/* Button */
+.mat-raised-button {
+  font-weight: bold;
+}
+
+.mat-raised-button.mat-primary {
+  color: #F7E000;
+}
+
+.mat-raised-button.mat-accent {
+  color: #003977;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */

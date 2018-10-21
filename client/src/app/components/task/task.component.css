@@ -1,0 +1,45 @@
+.background {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 75px 75px auto;
+  grid-row-gap: 30px;
+  justify-items: center;
+  height: 100vh;
+  background: #e0e0e0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  height: 400px;
+  background-color: #FEFEFE;
+  padding: 10px;
+}
+
+.container .mat-form-field-infix, .container textarea {
+  font-size: 1.25em;
+  width: 80%;
+}
+
+.singleline {
+  grid-column: 1/-1;
+}
+
+.singleline button {
+  margin-right: 1em;
+}
+
+.input {
+  width: 80%;
+}
+
+.readonly-fields {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 3em;
+  justify-items: center;
+}
+
+/*# sourceMappingURL=task.component.css.map */

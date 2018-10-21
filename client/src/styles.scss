@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+@import "assets/css/overwrite";
+@import "assets/css/responsive";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+}

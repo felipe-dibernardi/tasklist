@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  background: #03a9f4;
+  box-shadow: 1px 1px 3px #333;
+  height: 75px;
+}
+
+.user {
+  font-size: 1.5em;
+  grid-column: 11 / -1;
+  grid-row: 1 / 1;
+  justify-self: center;
+}
+
+.logout {
+  justify-self: end;
+  margin-right: 20px;
+  grid-column: 12 / -1;
+  grid-row: 1 / 1;
+}

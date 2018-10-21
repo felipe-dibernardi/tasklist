@@ -1,0 +1,42 @@
+.background {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 75px 75px auto;
+  grid-row-gap: 30px;
+  justify-items: center;
+  height: 100vh;
+  background: #e0e0e0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #003977;
+}
+
+.add-button {
+  margin-left: 10px;
+}
+
+.task-table {
+  width: 70%;
+}
+
+.mat-column-remove, .mat-column-action, .mat-column-edit {
+  width: 40px;
+}
+
+.mat-column-creation, .mat-column-last-update {
+  width: 150px;
+}
+
+.mat-column-status {
+  width: 120px;
+}
+
+a {
+  color: #003977;
+}
+
+/*# sourceMappingURL=task-list.component.css.map */
