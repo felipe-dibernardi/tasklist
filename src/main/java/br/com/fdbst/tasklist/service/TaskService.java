@@ -2,7 +2,6 @@ package br.com.fdbst.tasklist.service;
 
 import br.com.fdbst.tasklist.exception.BusinessException;
 import br.com.fdbst.tasklist.model.Task;
-import br.com.fdbst.tasklist.model.User;
 import br.com.fdbst.tasklist.type.StatusType;
 
 import javax.ejb.Stateless;
@@ -31,7 +30,8 @@ public class TaskService extends BasePersistence<Task> {
 
         strQuery.append("SELECT t FROM Task t ");
         strQuery.append("WHERE t.user.id = ").append(userId).append(" ");
-        strQuery.append("AND t.status NOT IN :status");
+        strQuery.append("AND t.status NOT IN :status ");
+        strQuery.append("ORDER BY t.status DESC, t.lastUpdate");
 
         Query query = super.createQuery(strQuery.toString());
 

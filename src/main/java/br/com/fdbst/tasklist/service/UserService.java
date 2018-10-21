@@ -19,6 +19,9 @@ public class UserService extends BasePersistence<User> {
 
     @Override
     public User insert(User user) throws BusinessException {
+        if (findByUsername(user.getUsername()) != null) {
+            throw new BusinessException("Username já existente");
+        }
         user.setPassword(MD5Hash.encript(user.getPassword()));
         return super.insert(user);
     }
