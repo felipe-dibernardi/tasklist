@@ -19,7 +19,7 @@ faces-config.NavData
 *.css.map
 
 # compiled output
-/dist
+dist
 /tmp
 /out-tsc
 
